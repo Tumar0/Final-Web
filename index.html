@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home · Liara Yoga Studio</title>
+<meta name="description" content="Liara is a quiet yoga studio in Astana.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Ccircle cx='5' cy='5' r='5' fill='%23c9387f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main id="main">
+<section class="hero"><div class="wrap"><div class="row align-items-center g-5">
+<div class="col-lg-7 reveal"><p class="eyebrow">Yoga studio · Astana</p>
+<h1>Slow down. <em style="color:var(--brand)">Breathe.</em><br>Come back to yourself.</h1>
+<p class="muted fs-5">Liara is a small studio that offers quiet, unhurried classes for people who spend their days at a screen and want to feel their body again. No mirrors, no competition, no experience needed.</p>
+<a class="btn-liara" href="classes.html#booking">Book your first class</a> <a class="btn-line" href="classes.html#schedule">Find your class</a></div>
+<div class="col-lg-5 text-center reveal"><div class="breath" role="img" aria-label="Breathing animation"><i><span id="breathTxt">Inhale</span></i></div>
+<p class="muted small mt-4">Four seconds in, four seconds out. Try it with us.</p><button type="button" class="btn-line btn-sm" id="pauseBreath">Pause breathing guide</button></div></div></div></section>
+<section class="sec alt" id="classes"><div class="wrap"><p class="eyebrow">Find your practice</p><h2 class="mb-4">Six ways to move</h2><div class="row g-4">
+<div class="col-md-6 col-lg-4"><article class="cardx"><div class="ico fs-3" aria-hidden="true">🌅</div><h3 class="h5 mt-2">Morning Flow</h3><p class="muted small">A gentle vinyasa that wakes up the spine and sets a calm tone for the day.</p><small><strong>60 min</strong> · <span class="tag ">All levels</span></small></article></div>
+<div class="col-md-6 col-lg-4"><article class="cardx"><div class="ico fs-3" aria-hidden="true">🔥</div><h3 class="h5 mt-2">Power Hatha</h3><p class="muted small">Longer holds and strong standing poses. Build strength, balance and focus without rushing.</p><small><strong>75 min</strong> · <span class="tag ">Intermediate</span></small></article></div>
+<div class="col-md-6 col-lg-4"><article class="cardx"><div class="ico fs-3" aria-hidden="true">🌙</div><h3 class="h5 mt-2">Evening Restore</h3><p class="muted small">Supported poses, soft light and breathwork to release the tension of a long working day.</p><small><strong>60 min</strong> · <span class="tag beg">Beginner</span></small></article></div>
+<div class="col-md-6 col-lg-4"><article class="cardx"><div class="ico fs-3" aria-hidden="true">🪑</div><h3 class="h5 mt-2">Mobility for Desk Workers</h3><p class="muted small">Targeted stretches for the neck, shoulders and lower back, made for people who sit all day.</p><small><strong>60 min</strong> · <span class="tag beg">Beginner</span></small></article></div>
+<div class="col-md-6 col-lg-4"><article class="cardx"><div class="ico fs-3" aria-hidden="true">🌿</div><h3 class="h5 mt-2">Slow Sunday Flow</h3><p class="muted small">An unhurried weekend practice that links breath and movement and ends with a long rest.</p><small><strong>75 min</strong> · <span class="tag ">All levels</span></small></article></div>
+<div class="col-md-6 col-lg-4"><article class="cardx"><div class="ico fs-3" aria-hidden="true">✨</div><h3 class="h5 mt-2">Advanced Vinyasa</h3><p class="muted small">Inversions, arm balances and flowing sequences for students with a steady practice.</p><small><strong>90 min</strong> · <span class="tag adv">Advanced</span></small></article></div>
+</div></div></section>
+<section class="stats"><div class="wrap"><div class="row g-4"><div class="col-6 col-md-3"><b>3</b>certified teachers</div><div class="col-6 col-md-3"><b>12</b>classes every week</div><div class="col-6 col-md-3"><b>12</b>people max per class</div><div class="col-6 col-md-3"><b>1</b>free trial class</div></div></div></section>
+<section class="sec"><div class="wrap"><div class="row align-items-center g-5"><div class="col-lg-5"><p class="eyebrow">Class finder</p><h2>Not sure where to start?</h2><p class="muted">Answer four short questions and we will suggest the class that fits your body, your day and your experience. It takes less than a minute.</p><p class="muted small">Tip: press the keys 1–4 to choose an answer and Enter to continue.</p></div>
+<div class="col-lg-7"><div class="quiz" id="quiz" aria-live="polite"></div></div></div></div></section>
+<section class="sec alt"><div class="wrap text-center"><p class="eyebrow">Kind words</p><h2>What students say</h2><div id="review" class="my-4" aria-live="polite" style="min-height:90px"></div>
+<button type="button" class="btn-line btn-sm" id="rvPrev" aria-label="Previous review">←</button> <button type="button" class="btn-line btn-sm" id="rvNext" aria-label="Next review">→</button>
+<p class="muted small mt-3">Sample reviews written for this student project; the names are fictional.</p></div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/data.js"></script><script src="js/home.js"></script>
+</body>
+</html>

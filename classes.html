@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classes &amp; Booking · Liara Yoga Studio</title>
+<meta name="description" content="Liara is a quiet yoga studio in Astana.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Ccircle cx='5' cy='5' r='5' fill='%23c9387f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main id="main">
+<section class="sec alt" style="background:linear-gradient(120deg,var(--lav),var(--bg))"><div class="wrap"><p class="eyebrow">Classes &amp; booking</p><h1>Pick a time. Bring yourself.</h1><p class="muted">Mats, blocks and blankets are provided. Arrive ten minutes early, wear something comfortable and leave the rest to us.</p></div></section>
+<section class="sec" id="schedule"><div class="wrap"><p class="eyebrow">Weekly schedule</p><h2 class="mb-4">When we practice</h2>
+<form class="cardx mb-3" id="filters" role="search" aria-label="Filter classes" novalidate><div class="row g-3">
+<div class="col-md-4"><label class="form-label small" for="fSearch">Search</label><input class="form-control" id="fSearch" placeholder="Class, teacher or day"></div>
+<div class="col-6 col-md-2"><label class="form-label small" for="fDay">Day</label><select class="form-select" id="fDay"><option value="">Every day</option></select></div>
+<div class="col-6 col-md-3"><label class="form-label small" for="fLevel">Level</label><select class="form-select" id="fLevel"><option value="">All levels</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
+<div class="col-md-3"><label class="form-label small" for="fSort">Sort by</label><select class="form-select" id="fSort"><option value="day">Day and time</option><option value="spots">Most free spots</option><option value="name">Class name</option></select></div></div>
+<div class="d-flex justify-content-between mt-3"><label class="small"><input type="checkbox" id="fFree"> Only classes with free spots</label><button type="button" class="btn-line btn-sm" id="fClear">Clear filters</button></div></form>
+<p class="small muted" id="count" aria-live="polite"></p>
+<div class="tablewrap"><table class="sched"><caption class="small muted">Weekly timetable. Classes are held in the main hall, maximum 12 people.</caption><thead><tr><th scope="col">Day</th><th scope="col">Time</th><th scope="col">Class</th><th scope="col">Teacher</th><th scope="col">Level</th><th scope="col">Spots</th><th scope="col"><span class="visually-hidden">Book</span></th></tr></thead><tbody id="rows"></tbody></table><div class="empty" id="noRes" hidden>No classes match your filters. Try clearing them.</div></div></div></section>
+<section class="sec alt" id="prices"><div class="wrap"><p class="eyebrow text-center d-block">Memberships</p><h2 class="text-center mb-4">Simple prices, no pressure</h2><div class="row g-4">
+<div class="col-md-4"><div class="cardx plan"><h3 class="h5">Drop-in</h3><p class="muted">One class, whenever you feel like it.</p><div class="price">4 000 ₸</div><ul><li>Any class on the schedule</li><li>Mat and props included</li><li>First class free</li></ul><a class="btn-line w-100 text-center" href="#booking">Try a class</a></div></div>
+<div class="col-md-4"><div class="cardx plan hot"><span class="tag" style="background:var(--brand);color:#fff">Most loved</span><h3 class="h5 mt-2">Unlimited</h3><p>Practice as often as you like.</p><div class="price">28 000 ₸<small class="fs-6"> / month</small></div><ul><li>Unlimited classes</li><li>Bring a friend once a month</li><li>Free breathwork workshop</li><li>Freeze for 7 days</li></ul><a class="btn-liara w-100 text-center" href="#booking">Join Liara</a></div></div>
+<div class="col-md-4"><div class="cardx plan"><h3 class="h5">10-class pass</h3><p class="muted">Flexible, valid for three months.</p><div class="price">32 000 ₸</div><ul><li>10 classes, any level</li><li>Share with a friend</li><li>Mat and props included</li></ul><a class="btn-line w-100 text-center" href="#booking">Get a pass</a></div></div></div>
+<div class="cardx mt-4"><div class="row g-4"><div class="col-lg-5"><h3 class="h5">Which plan is cheapest for you?</h3><p class="muted small">Tell us how often you would like to come and we will compare the three options.</p>
+<label class="form-label small" for="calcN">Classes per month: <output id="calcOut">8</output></label><input type="range" class="form-range" id="calcN" min="1" max="30" value="8"></div>
+<div class="col-lg-7" id="calcRes" aria-live="polite"></div></div></div></div></section>
+<section class="sec"><div class="wrap"><div class="row g-4"><div class="col-lg-4"><p class="eyebrow">Good to know</p><h2>Questions before your first class</h2></div><div class="col-lg-8" id="faq"></div></div></div></section>
+<section class="sec alt" id="booking"><div class="wrap"><p class="eyebrow text-center d-block">Booking</p><h2 class="text-center mb-4">Reserve your spot</h2><div class="row g-4"><div class="col-lg-8">
+<form class="cardx" id="bookForm" novalidate><div class="row g-3">
+<div class="col-md-6"><label class="form-label" for="bName">Full name</label><input class="form-control" id="bName" autocomplete="name"><div class="err" id="eName"></div></div>
+<div class="col-md-6"><label class="form-label" for="bEmail">Email</label><input class="form-control" id="bEmail" type="email" autocomplete="email"><div class="err" id="eEmail"></div></div>
+<div class="col-md-6"><label class="form-label" for="bPhone">Phone</label><input class="form-control" id="bPhone" placeholder="+7 700 123 45 67" autocomplete="tel"><div class="err" id="ePhone"></div></div>
+<div class="col-md-6"><label class="form-label" for="bClass">Class</label><select class="form-select" id="bClass"><option value="">Choose a class</option></select><div class="err" id="eClass"></div></div>
+<div class="col-md-6"><label class="form-label" for="bDate">Date</label><input class="form-control" id="bDate" type="date"><div class="err" id="eDate"></div></div>
+<div class="col-md-6"><label class="form-label" for="bSpots">Number of spots</label><input class="form-control" id="bSpots" type="number" value="1" min="1" max="3"><div class="err" id="eSpots"></div><small class="muted">You and up to two friends (1–3).</small></div>
+<fieldset class="col-12"><legend class="form-label fs-6">Your experience</legend><label class="me-3"><input type="radio" name="exp" value="New to yoga"> New to yoga</label><label class="me-3"><input type="radio" name="exp" value="Some practice"> Some practice</label><label><input type="radio" name="exp" value="Regular"> Regular</label><div class="err" id="eExp"></div></fieldset>
+<div class="col-12"><label class="form-label" for="bNote">Anything we should know? <small class="muted">(injuries, questions, optional)</small></label><textarea class="form-control" id="bNote" rows="3" maxlength="300"></textarea><small class="muted" id="noteCnt">0 / 300</small></div>
+<div class="col-12"><label><input type="checkbox" id="bAgree"> I agree to be contacted about my booking.</label><div class="err" id="eAgree"></div></div>
+<div class="col-12"><button class="btn-liara" type="submit">Reserve my spot</button></div><div class="col-12" id="bookOk" aria-live="polite"></div></div></form></div>
+<div class="col-lg-4"><div class="cardx" style="background:var(--lav)"><h3 class="h5">Find us</h3><p class="eyebrow">Address</p><p>Example Street 24, 2nd floor<br>Astana, Kazakhstan</p><p class="eyebrow">Opening hours</p><p>Mon–Fri 07:00–21:00<br>Sat–Sun 09:00–19:00</p><p class="eyebrow">Contact</p><p>hello@liara-yoga.example<br>+7 (700) 000-00-00</p></div></div></div></div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/data.js"></script><script src="js/classes.js"></script>
+</body>
+</html>
